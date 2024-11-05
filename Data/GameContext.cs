@@ -15,7 +15,6 @@ public class GameContext : DbContext
             .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
             .AddJsonFile("appsettings.json")
             .Build();
-        //
 
         optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
 
