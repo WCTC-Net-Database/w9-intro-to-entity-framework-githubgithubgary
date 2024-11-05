@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using W9_assignment_template.Data;
+using W9temp.Data;
 
 #nullable disable
 
@@ -21,7 +21,7 @@ namespace W9_assignment_template.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("W9_assignment_template.Models.Character", b =>
+            modelBuilder.Entity("W9temp.Models.Character", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -46,7 +46,7 @@ namespace W9_assignment_template.Migrations
                     b.ToTable("Characters");
                 });
 
-            modelBuilder.Entity("W9_assignment_template.Models.Room", b =>
+            modelBuilder.Entity("W9temp.Models.Room", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -67,9 +67,9 @@ namespace W9_assignment_template.Migrations
                     b.ToTable("Rooms");
                 });
 
-            modelBuilder.Entity("W9_assignment_template.Models.Character", b =>
+            modelBuilder.Entity("W9temp.Models.Character", b =>
                 {
-                    b.HasOne("W9_assignment_template.Models.Room", "Room")
+                    b.HasOne("W9temp.Models.Room", "Room")
                         .WithMany("Characters")
                         .HasForeignKey("RoomId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -78,7 +78,7 @@ namespace W9_assignment_template.Migrations
                     b.Navigation("Room");
                 });
 
-            modelBuilder.Entity("W9_assignment_template.Models.Room", b =>
+            modelBuilder.Entity("W9temp.Models.Room", b =>
                 {
                     b.Navigation("Characters");
                 });

@@ -2,10 +2,10 @@
 using System.Data;
 using System.Reflection.Metadata.Ecma335;
 using System.Xml.Linq;
-using W9_assignment_template.Data;
-using W9_assignment_template.Models;
+using W9temp.Data;
+using W9temp.Models;
 
-namespace W9_assignment_template.Services;
+namespace W9temp.Services;
 
 public class GameEngine
 {

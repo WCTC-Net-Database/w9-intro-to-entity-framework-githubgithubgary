@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using W9_assignment_template.Models;
+using W9temp.Models;
 
-namespace W9_assignment_template.Data;
+namespace W9temp.Data;
 
 public class GameContext : DbContext
 {
